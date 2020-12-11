@@ -26,14 +26,12 @@ struct ContentView: View {
                 .ignoresSafeArea()
             VStack {
                 VStack(spacing: 20.0) {
-                    CircleView(color: .red).opacity(redViewValue)
-                    CircleView(color: .yellow).opacity(yellowViewValue)
-                    CircleView(color: .green).opacity(greenViewValue)
+                    CircleView(color: .red, opacity: redViewValue)
+                    CircleView(color: .yellow, opacity: yellowViewValue)
+                    CircleView(color: .green, opacity: greenViewValue)
                 }
                 Spacer()
-                Button(action: { updateUI() }) {
-                    ButtonView(title: titleButton)
-                }
+                StartButton(title: titleButton) { updateUI() }
             }
             .padding(.top, 20)
             .padding(.bottom, 20)
